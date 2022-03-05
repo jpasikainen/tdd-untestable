@@ -15,5 +15,6 @@ export class IO {
 
   destroy() {
     unlink("time.txt", (err) => {});
+    this.fileExists = false;
   }
 }
