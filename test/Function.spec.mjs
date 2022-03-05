@@ -4,7 +4,7 @@ import { existsSync } from "fs";
 
 describe("Function", () => {
   it("writes time at least once after 1000 tries", () => {
-    for (let i = 0; i < 1000; i++) {
+    while (!existsSync("time.txt")) {
       toWriteOrNotToWrite();
     };
     let exists = false;
