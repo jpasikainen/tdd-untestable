@@ -12,5 +12,10 @@ describe("IO", () => {
   it("writes time", () => {
     io.writeTime();
     expect(io.fileExists).to.equal(true);
-  })
+  });
+  it("destorys file", () => {
+    io.writeTime();
+    io.destroy();
+    expect(io.fileExists).to.equal(false);
+  });
 })
